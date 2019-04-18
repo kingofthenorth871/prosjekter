@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Favoritt</title>
+		<script type="text/javascript" src="js/felles.js"></script>
+		<script type="text/javascript" src="js/favoritt.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/stilark.css">
+		<meta name="viewport" content="fwidth=device-width, initial-scale=1">
+	</head>
+	<body>
+		<div class="container-bakgrunnMobile"></div>
+		<div class="displayContainer">
+			<div class="container-bakgrunn">
+				<div class="container-knapp">
+					<div class="StorKnappStyle">
+						<button onclick="klikkHjem()"> Hjem </button>
+						<button onclick="klikkToalettsok()"> Toalettsøk </button>
+						<button onclick="klikkLekeplasser()"> Lekeplasser </button>
+						<button onclick="klikkFavoritt()"> Favoritt </button>
+						<button onclick="klikkArbeidsledighet()"> Arbeidsledighet </button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button class="menyKnapp" onclick="clickmeny('menyaction')">Meny</button>
+		<div id="menyaction" style="display: none;" class="meny-innhold">
+			<a href="index.html">Hjem</a>
+			<a href="toalettsok.html">Toalettsøk</a>
+			<a href="lekeplasser.html">Lekeplasser</a>
+			<a href="favoritt.html">Favoritt</a>
+			<a href="arbeidsledighet.html">Arbeidsledighet</a>
+		</div>
+		<div class="forside-wrapper">
+			<div class="forside-topp">
+				<h1>Mitt favorittoalett</h1>
+				<h2>Velg et element fra listen:</h2>
+			</div>
+			<div class="forside-bilde2">
+				<div class="valgStyle">
+					<div id="velg"></div>
+					<div id="infoLavestDistanse"></div>
+				</div>
+			</div>
+			<aside class="sidefyll sidefyll-1">
+				<img src="media/bergenkommune.png"/>
+			</aside>
+			<aside class="sidefyll sidefyll-2">
+				<img src="media/hordaland.png"/>
+			</aside>
+			<footer class="footerForside">
+				<p>Bergen kommune &#169;</p>
+				<p>Kontakt oss på: info@bergenkommune.no</p>
+		</footer>
+		</div>
+	</body>
+</html>

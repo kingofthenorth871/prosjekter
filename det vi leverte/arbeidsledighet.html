@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		 <meta charset="UTF-8">
+		<title>Arbeidsledige, sesongjustert (AKU). Siste 13 mnd</title>
+		<meta name="viewport" content="fwidth=device-width, initial-scale=1">
+		<script type="text/javascript" src="js/felles.js"></script>
+		<script type="text/javascript" src="js/arbeidsledighet.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/stilark.css">
+	</head>
+	<body>
+		<div class="container-bakgrunnMobile"></div>
+		<div class="displayContainer">
+			<div class="container-bakgrunn">
+				<div class="container-knapp">
+					<div class="StorKnappStyle">
+						<button onclick="klikkHjem()"> Hjem </button>
+						<button onclick="klikkToalettsok()"> Toalettsøk </button>
+						<button onclick="klikkLekeplasser()"> Lekeplasser </button>
+						<button onclick="klikkFavoritt()"> Favoritt </button>
+						<button onclick="klikkArbeidsledighet()"> Arbeidsledighet </button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button class="menyKnapp" onclick="clickmeny('menyaction')">Meny</button>
+		<div id="menyaction" style="display: none;" class="meny-innhold">
+			<a href="index.html">Hjem</a>
+			<a href="toalettsok.html">Toalettsøk</a>
+			<a href="lekeplasser.html">Lekeplasser</a>
+			<a href="favoritt.html">Favoritt</a>
+			<a href="arbeidsledighet.html">Arbeidsledighet</a>
+		</div>
+		<div class="overskrift1">
+		<h1>Arbeidsledige, sesongjustert (AKU). Siste 13 mnd </h1>
+		<h2>Februar 2017 til mars 2018</h2>
+		</div>
+
+		<div class="wrapper-arbeidsledighet">
+			<div class="månedsMeny">
+			 <button onclick="visInnhold()" class="dropdownArbeidsledighet">Velg fra måned</button>
+			 <div id="menyItems1" class="dropdown-arbeidsledighet-innhold">
+			   <a href="#" onclick= "februarFunction()" >Februar 2017 </a>
+			   <a href="#" onclick= "marsFunction()">Mars 2017</a>
+			   <a href="#" onclick= "aprilFunction()">April 2017</a>
+			   <a href="#" onclick= "mayFunction()">May 2017</a>
+			   <a href="#" onclick= "juniFunction()">Juni 2017</a>
+			   <a href="#" onclick= "juliFunction()">Juli 2017</a>
+			   <a href="#" onclick= "augustFunction()">August 2017</a>
+			   <a href="#" onclick= "septemberFunction()">September 2017</a>
+			   <a href="#" onclick= "oktoberFunction()">Oktober 2017</a>
+			   <a href="#" onclick= "novemberFunction()">November 2017</a>
+			   <a href="#" onclick= "desemberFunction()">Desember 2017</a>
+			   <a href="#" onclick= "januar2018Function()">Januar 2018</a>
+			   <a href="#" onclick= "februar2018Function()">Februar 2018</a>
+			 </div>
+			</div>
+			<div class="input-wrapper">
+				<input id="måned fra"type="text" name="search.bar" value="" class="input-innhold">
+				<p>Fra måned nummer</p>
+			</div>
+			<br><br><br>
+			<div class="månedsMeny">
+			<button onclick="visInnhold2()" class="dropdownArbeidsledighet">Velg til måned</button>
+			<div id="menyItems2" class="dropdown-arbeidsledighet-innhold">
+				<a href="#" onclick= "februarFunction2()">Februar 2017 </a>
+				<a href="#" onclick= "marsFunction2()">Mars 2017</a>
+				<a href="#" onclick= "aprilFunction2()">April 2017</a>
+				<a href="#" onclick= "mayFunction2()">May 2017</a>
+				<a href="#" onclick= "juniFunction2()">Juni 2017</a>
+				<a href="#" onclick= "juliFunction2()">Juli 2017</a>
+				<a href="#" onclick= "augustFunction2()">August 2017</a>
+				<a href="#" onclick= "septemberFunction2()">September 2017</a>
+				<a href="#" onclick= "oktoberFunction2()">Oktober 2017</a>
+				<a href="#" onclick= "novemberFunction2()">November 2017</a>
+				<a href="#" onclick= "desemberFunction2()">Desember 2017</a>
+				<a href="#" onclick= "januar2018Function2()">Januar 2018</a>
+				<a href="#"  onclick= "februar2018Function2()">Februar 2018</a>
+			</div>
+			</div>
+			  <input id="måned til"type="text" name="search.bar" value="" class="input-innhold">
+			  <p>Til måned nummer</p>
+			<div class="avkrysning-arbeidsledighet">
+				<input id="gjennomsnitt" type="checkbox" name="checkbox1" value=""> gjennomsnitt
+				<br>
+				<input id="median" type="checkbox" name="checkbox2" value=""> median
+				<br>
+				<input id="antall" onclick="exclusive()" type="checkbox" name="checkbox2" value="" checked=true> antall
+				<br>
+				<input id="prosent" onclick="exclusive2()" type="checkbox" name="checkbox2" value="" > prosent
+				<br>
+				<div class="presenter-data">
+					<button class="dropdownArbeidsledighet"  onclick="genererChart()" > Presenter data</button>
+				</div>
+			</div>
+			<div class="container" id="graph-container">
+			  <canvas id="Chart" class="canvas-graf"></canvas>
+			</div>
+		</div>
+	</body>
+	<footer>
+		<p>Bergen kommune &#169;</p>
+		<p>Kontakt oss på: info@bergenkommune.no</p>
+	</footer>
+</html>
