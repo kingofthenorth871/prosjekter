@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/stilark.css">
+		<script type="text/javascript" src="js/felles.js"></script>
+		<script type="text/javascript" src="js/lekeplasser.js"></script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSlRWLI4kEhuDYQ9xq0XGn26-llUcs68w&callback=getLekeplasser"></script>
+		<title>Lekeplasser i Bergen</title>
+	</head>
+	<body>
+		<div class="container-bakgrunnMobile"></div>
+		<div class="displayContainer">
+			<div class="container-bakgrunn">
+				<div class="container-knapp">
+					<div class="StorKnappStyle">
+						<button onclick="klikkHjem()"> Hjem </button>
+						<button onclick="klikkToalettsok()"> Toalettsøk </button>
+						<button onclick="klikkLekeplasser()"> Lekeplasser </button>
+						<button onclick="klikkFavoritt()"> Favoritt </button>
+						<button onclick="klikkArbeidsledighet()"> Arbeidsledighet </button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button class="menyKnapp" onclick="clickmeny('menyaction')">Meny</button>
+		<div id="menyaction" style="display: none;" class="meny-innhold">
+			<a href="index.html">Hjem</a>
+			<a href="toalettsok.html">Toalettsøk</a>
+			<a href="lekeplasser.html">Lekeplasser</a>
+			<a href="favoritt.html">Favoritt</a>
+			<a href="arbeidsledighet.html">Arbeidsledighet</a>
+		</div>
+		<h1>Oversikt over lekeplasser i Bergen kommune</h1>
+		<div class="flexContainer-TabellogKart">
+			<div class="container-tabell">
+			<div class="tabell-style" id="jsonLekeplass"></div>
+			</div>
+			<div id="kart"></div>
+		</div>
+		<footer>
+			<p>Bergen kommune &#169;</p>
+			<p>Kontakt oss på: info@bergenkommune.no</p>
+		</footer>
+	</body>
+</html>

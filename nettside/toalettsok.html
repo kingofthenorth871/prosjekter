@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		 <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Toalettsøk</title>
+		<<link rel="stylesheet" type="text/css" href="css/stilark.css">
+		<script type="text/javascript" src="js/felles.js"></script>
+		<script type="text/javascript" src="js/sok.js"></script>
+	</head>
+	<body>
+		<div class="container-bakgrunnMobile"></div>
+		<div class="displayContainer">
+			<div class="container-bakgrunn">
+				<div class="container-knapp">
+					<div class="StorKnappStyle">
+						<button onclick="klikkHjem()"> Hjem </button>
+						<button onclick="klikkToalettsok()"> Toalettsøk </button>
+						<button onclick="klikkLekeplasser()"> Lekeplasser </button>
+						<button onclick="klikkFavoritt()"> Favoritt </button>
+						<button onclick="klikkArbeidsledighet()"> Arbeidsledighet </button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button class="menyKnapp" onclick="clickmeny('menyaction')">Meny</button>
+		<div id="menyaction" style="display: none;" class="meny-innhold">
+			<a href="index.html">Hjem</a>
+			<a href="toalettsok.html">Toalettsøk</a>
+			<a href="lekeplasser.html">Lekeplasser</a>
+			<a href="favoritt.html">Favoritt</a>
+			<a href="arbeidsledighet.html">Arbeidsledighet</a>
+		</div>
+		<div class="forside-wrapper">
+			<div class="forside-topp">
+				<h1>Toalettoversikt Bergen</h1>
+				<h3>En oversikt over byen offentlige toaletter</h3>
+				<p>Bergen kommune disponerer flere offentlige toaletter. På denne siden kan du lete og søke etter offentlige toaletter. God fornøyelse!</p>
+			</div>
+			<div class="forside-bilde3">
+				
+				<input id="checkboxmann" type="checkbox" name="checkbox1" value=""> mann<br>
+				<input id="checkboxkvinne" type="checkbox" name="checkbox2" value=""> kvinne<br>
+				<input id="checkboxrullestoltilgang"type="checkbox" name="checkbox3" value=""> rullestoltilgang<br>
+				<input id="checkboxstellerom"type="checkbox" name="checkbox3" value=""> Stellerom<br>
+				<input id="checkboxgratis"type="checkbox" name="checkbox3" value=""> Gratis<br>
+				<input id="åpent" type="checkbox" name="checkbox1" value=""> Åpen nå<br>
+				<input id="makspris"type="text" placeholder="10" name="search.bar" value="">  Makspris<br>
+				<input id="åpenklokkeslett"type="text" placeholder="23.00" name="search.bar" value="">  Åpen klokkeslett<br>
+				<button class="dropdownArbeidsledighet" onclick='avansertSøk()'>Avansert søk</button><br>
+				<input id="enkeltSøk" placeholder="Feks. nonneseter" type="text" name="search.bar" value="" >  EnkeltSøk<br>
+				<button class="dropdownArbeidsledighet" onclick='enkeltSøk()'>EnkeltSøk</button><br>
+				<input id="hurtigSøk" placeholder="åpent 23.30 mann, kvinne, pris 12" type="text" name="search.bar" value="" > Hurtigsøk<br>
+				<button class="dropdownArbeidsledighet" onclick='hurtigsøk()'>HurtigSøk</button><br>
+			</div>
+			<aside class="sidefyll sidefyll-1">
+				<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSlRWLI4kEhuDYQ9xq0XGn26-llUcs68w&callback=initMap"> </script>
+				<div id="kart"></div>
+			</aside>
+			<aside class="sidefyll sidefyll-2">
+			<div id="tabellen">
+
+			</div>
+			</aside>
+			<footer class="footerForside">
+				<p>Bergen kommune &#169;</p>
+				<p>Kontakt oss på: info@bergenkommune.no</p>
+			</footer>
+		</div>
+	</body>
+</html>
